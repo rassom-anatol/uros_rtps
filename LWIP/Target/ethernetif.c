@@ -223,7 +223,17 @@ static void low_level_init(struct netif *netif)
   /* USER CODE BEGIN MACADDRESS */
   netif->flags |= NETIF_FLAG_IGMP;
   ETH_MACFilterConfigTypeDef rtps_filter;
+  //rtps_filter.PromiscuousMode = ENABLE;
   rtps_filter.PassAllMulticast = ENABLE;
+  //rtps_filter.ReceiveAllMode = DISABLE;
+  //rtps_filter.DestAddrInverseFiltering = DISABLE;
+  //rtps_filter.SrcAddrFiltering = DISABLE;
+  //rtps_filter.BroadcastFilter = DISABLE;
+  //rtps_filter.ControlPacketsFilter = 0;
+  //rtps_filter.HashUnicast = DISABLE;
+  //rtps_filter.HashMulticast = DISABLE;
+  //rtps_filter.DestAddrInverseFiltering = DISABLE;
+  //rtps_filter.SrcAddrInverseFiltering = DISABLE;
   HAL_ETH_SetMACFilterConfig(&heth, &rtps_filter);
   /* USER CODE END MACADDRESS */
 
