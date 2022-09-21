@@ -15,6 +15,7 @@
 11. Subscribe to cubemx_publisher `ros2 topic echo cubemx_publisher` if available
 
 ## Observations
+### See [Captures](https://github.com/rassom-anatol/uros_rtps/tree/master/Captures)
 1. When the topic echo appears to be working at the terminal, Wireshark captures HEARTBEAT, INFO_TS, and topic DATA sent from STM to the host. Sometimes, the topic DATA comes in sporadic bursts.
 2. Sometimes cubemx_publisher topic never becomes available. In this case, Wireshark shows that the host continuously sends ACKNACK and HEARTBEAT messages to STM and STM only sends INFO_TS and DATA(p) to 239.255.0.1.
 3. Trying to run a second subscriber always breaks STM. In this case, the capture shows a gradual degradation in STM's communication and eventually 'destination unreachable' condition.
